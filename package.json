@@ -1,4 +1,9 @@
 {
+  "name":"nya-ia",
+  "version": "0.01",
+  "main": "index.js",
+  "license":"The Unlicense",
+  "author":"Hugo",
   "dependencies": {
     "discord.js": "^13.6.0"
   }
