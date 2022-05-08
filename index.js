@@ -7,7 +7,7 @@ const Client = new Discord.Client({
 });
 
 //Bot Token
-Client.login("OTcyNTQ0MDIxMzYyNzc0MDg3.GeQYNp.Prcnn7cuubiiZRDtecdsB6qDZnyOBcfVXccbI8");
+Client.login(process.env.TOKEN);
 
 //Bot Prefix
 const prefix = "!"
