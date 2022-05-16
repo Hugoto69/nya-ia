@@ -6,32 +6,22 @@ const Client = new Discord.Client({
     ]
 });
 
-//Bot Token
-Client.login(process.env.TOKEN);
-
-//Bot Prefix
+// Bot Prefix
 const prefix = "!"
 
-//Bot Starting
+// Bot Starting
 Client.on("ready", () => {
-    //Vérifie si le Bot est en ligne
-    console.log("NyaIA Online !")
+    // Vérifie si le Bot est en ligne
+    console.log("NyaIA Online !");
+    // Bot Riche Presence
+    Client.user.setActivity("avec des chats :3", { type: "PLAYING" });
 });
 
-//Bot Rich Presence
-client.user.setPresence({
-    activities: [{
-        name: "!aide",
-        type: "playing"
-    }],
-    status: "online"
-});
-
-//Partie IA
+// Partie IA
 Client.on("messageCreate", message => {
     if (message.author.bot) return;
 
-    //Bonjour
+    // Bonjour
     if(message.content === prefix + "Bonjour")
         message.reply("Bonjour Humain ^^");
     else if(message.content === prefix + "bonjour")
@@ -57,3 +47,6 @@ Client.on("messageCreate", message => {
     else if(message.content === prefix + "cc")
         message.reply("Bonjour Humain ^^");
 })
+
+// Bot Token
+Client.login(process.env.TOKEN);
